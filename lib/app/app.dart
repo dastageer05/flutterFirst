@@ -1,3 +1,4 @@
+import 'package:firstflutter/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -9,9 +10,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: "Flutter first",
-        home: Container(
-          color: Colors.amber,
-        )
+        theme: ThemeData(
+          primarySwatch: Colors.amber
+        ),
+        home: HomeView()
     );
   }
 }
