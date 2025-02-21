@@ -20,7 +20,7 @@ class _LoginState extends State<Login> {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/del.jpg"),
+            image: AssetImage("img3.png"),
             fit: BoxFit.fill,
           ),
         ),
@@ -75,6 +75,7 @@ class _LoginState extends State<Login> {
                           maxLength: 30,
                           decoration: InputDecoration(
                             filled: true,
+                            fillColor: Colors.white,
                             prefixIcon: Icon(Icons.person),
                             labelText: "Enter User Name",
                             border: OutlineInputBorder(
@@ -95,9 +96,9 @@ class _LoginState extends State<Login> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(12.0),
                       child: SizedBox(
-                        height: 40,
+                        height: 50,
                         width: 250,
                         child: TextField(
                           controller: txtpassword,
@@ -134,9 +135,13 @@ class _LoginState extends State<Login> {
                           ),
                         );
                       },
-                      child: Text("Login"),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(Colors.red),
+                        backgroundColor: WidgetStatePropertyAll(
+                            const Color.fromARGB(255, 128, 233, 42)),
+                      ),
+                      child: Text(
+                        "Login",
+                        style: TextStyle(color: Colors.white),
                       ),
                     ),
                   ),
